@@ -1,4 +1,4 @@
-  import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 
 import Layout from "./Layout";
 import Home from "./pages/Home";
@@ -10,9 +10,13 @@ const Routes = () => {
       element: <Layout />,
       children: [
         {
-          path: "/accueil",
+          path: "/",
           index: true,
           element: <Home />,
+        },
+        {
+          path: "*",
+          element: <Navigate to="/" />,
         },
       ],
     },
@@ -21,11 +25,7 @@ const Routes = () => {
   return <RouterProvider router={createBrowserRouter(routes)} />;
 };
 const App = () => {
-
-
-  return (
-    <Routes />
-  );
+  return <Routes />;
 };
 
 export default App;
