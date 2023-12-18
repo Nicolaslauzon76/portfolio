@@ -1,0 +1,89 @@
+.photos {
+    position: relative;
+
+    width: calc(100% - 2rem);
+    aspect-ratio: 1/1;
+    
+
+    @include breakpoint-min(768) {
+        width: 40%;
+    }
+
+    @include breakpoint-min(1024) {
+        width: 50%;
+    }
+
+    & > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        & > div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: calc(100% + 1rem);
+                height: calc(100% + 1rem);
+
+                border: 2px solid var(--rouge);
+
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .photos_un {
+        z-index: 10;
+        width: 50%;
+        height: 60%;
+        & > div {
+            & img {
+                object-position: 50% 0;
+            }
+        }
+    }
+
+    & .photos_deux {
+        top: 4rem;
+        left: auto;
+        right: 0;
+
+        z-index: 5;
+        width: 55%;
+        height: 50%;
+        & > div {
+            & img {
+                object-position: 50% 50%;
+            }
+        }
+    }
+
+    & .photos_trois {
+        top: auto;
+        bottom: 0;
+        left: 3rem;
+
+        z-index: 1;
+        width: 55%;
+        height: 60%;
+        & > div {
+            & img {
+                object-position: 50% 100%;
+            }
+        }
+    }
+}
