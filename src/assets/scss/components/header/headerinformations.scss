@@ -7,79 +7,77 @@
         @include h2;
         color: var(--blanc);
 
-        @include breakpoint-min(480){
+        @include breakpoint-min(480) {
             font-size: 5rem;
             font-weight: 700;
         }
 
-        @include breakpoint-min(640){
-            font-size: 6rem
+        @include breakpoint-min(640) {
+            font-size: 6rem;
         }
 
-        @include breakpoint-min(768){
+        @include breakpoint-min(768) {
             font-size: 7rem;
             font-weight: 800;
         }
 
-        @include breakpoint-min(1024){
+        @include breakpoint-min(1024) {
             font-size: 11rem;
         }
 
-        @include breakpoint-min(1200){
-            font-size: min(calc(2rem + 12vw) , 20rem);
-            font-weight: 900
+        @include breakpoint-min(1200) {
+            font-size: min(calc(2rem + 12vw), 20rem);
+            font-weight: 900;
         }
     }
     & h2 {
         @include h2;
 
         margin-top: -0.5rem;
-        
 
-        @include breakpoint-min(480){
+        @include breakpoint-min(480) {
             margin-top: -1rem;
         }
 
-        @include breakpoint-min(768){
+        @include breakpoint-min(768) {
             margin-top: -1.5rem;
         }
 
-        @include breakpoint-min(1024){
+        @include breakpoint-min(1024) {
             margin-top: -2rem;
         }
 
-        @include breakpoint-min(1200){
+        @include breakpoint-min(1200) {
             margin-top: -2.5rem;
         }
     }
 
     & h3 {
         margin-top: 0.8rem;
-
-        @include psmaller;
+        
+        @include h4;
         font-style: italic;
         color: var(--blanc);
 
-        @include breakpoint-min(480){
-            font-size: 1.25rem
+        @include breakpoint-min(480) {
+            font-size: 1.25rem;
         }
 
-        @include breakpoint-min(640){
-            font-size: 1.5rem
+        @include breakpoint-min(640) {
+            font-size: 1.5rem;
         }
 
-        @include breakpoint-min(768){
+        @include breakpoint-min(768) {
             font-size: 1.75rem;
         }
 
-        @include breakpoint-min(1024){
+        @include breakpoint-min(1024) {
             font-size: 2.5rem;
         }
 
-        @include breakpoint-min(1200){
-            font-size: min(calc(2.5rem + 1.5vw) , 3rem);
+        @include breakpoint-min(1200) {
+            font-size: min(calc(2.5rem + 1.5vw), 3rem);
             font-weight: 400;
-             
         }
 
         &::before {
@@ -95,30 +93,26 @@
 
             transform: translateY(-3px);
 
-            @include breakpoint-min(480){
+            @include breakpoint-min(480) {
                 width: 1.5rem;
                 transform: translateY(-5px);
             }
 
-            @include breakpoint-min(640){
-
+            @include breakpoint-min(640) {
                 transform: translateY(-6px);
             }
 
-            @include breakpoint-min(768){
+            @include breakpoint-min(768) {
                 transform: translateY(-7px);
             }
 
-            @include breakpoint-min(1024){
+            @include breakpoint-min(1024) {
                 transform: translateY(-10px);
             }
 
-            @include breakpoint-min(1200){
+            @include breakpoint-min(1200) {
                 transform: translateY(-14px);
             }
-            
         }
     }
-
-
 }
