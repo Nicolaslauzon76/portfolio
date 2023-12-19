@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
 import urlProfil from "../../assets/img/png/header_profil.png";
 import urlMusiqueBleu from "../../assets/img/svg/musique_bleu.svg";
+import Boutons from "./Boutons";
+
+  const titre = "Nicolas";
+  const sousTitre = "Lauzon";
+  const sousTitreDeux = "Développeur Front-End";
 
 const Header = () => {
   return (
@@ -10,19 +14,10 @@ const Header = () => {
       </div>
 
       <article className="header__informations">
-        <h1>Nicolas</h1>
-        <h2>Lauzon</h2>
-        <h3>Développeur Front-End</h3>
-        <div className="header__informations__boutons">
-          <ul>
-            <li>
-              <Link>Mon CV</Link>
-            </li>
-            <li>
-              <Link>Me contacter</Link>
-            </li>
-          </ul>
-        </div>
+        <h1>{titre}</h1>
+        <h2>{sousTitre}</h2>
+        <h3>{sousTitreDeux}</h3>
+        <Boutons classe={"header__informations__boutons"}/>
       </article>
       <div className="header__img">
         <img src={urlProfil} alt="Nicolas Lauzon" />
