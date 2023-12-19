@@ -1,0 +1,102 @@
+@import "articlecompetence.scss";
+
+.competences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    position: relative;
+    
+
+    width: 100%;
+
+    & .logiciels{
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 1200px;
+
+        margin-top: 4rem;
+        padding-inline: 1rem;
+
+        @include breakpoint-min(480) {
+            padding-inline: 2rem;
+        }
+
+        @include breakpoint-min(768) {
+            margin-top: 5rem;
+        }
+
+        @include breakpoint-min(1024) {
+            margin-top: 6rem;
+        }
+    }
+
+    & > .competences_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        width: 100%;
+        max-width: 1500px;
+
+        padding-inline: 1rem;
+
+        @include breakpoint-min(480) {
+            padding-inline: 2rem;
+        }
+
+
+        @include breakpoint-min(480) {
+            gap: 3rem;
+        }
+
+        @include breakpoint-min(768) {
+            gap: 4rem;
+        }
+
+        @include breakpoint-min(1024) {
+            gap: 5rem;
+        }
+
+        @include breakpoint-min(1200) {
+            gap: 6rem;
+        }
+
+        @include breakpoint-min(1400) {
+            gap: 7rem;
+        }
+
+        & h3 {
+            align-self: center;
+
+            margin-bottom: 0.5rem;
+
+            @include h3;
+
+            @include breakpoint-min(480) {
+                margin-bottom: 1rem;
+            }
+
+            @include breakpoint-min(768) {
+                margin-bottom: 1.5rem;
+            }
+
+            @include breakpoint-min(1024) {
+                margin-bottom: 2rem;
+            }
+
+            @include breakpoint-min(1200) {
+                margin-bottom: 2.5rem;
+            }
+
+            @include breakpoint-min(1400) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

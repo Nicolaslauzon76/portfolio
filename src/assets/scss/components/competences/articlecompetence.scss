@@ -1,0 +1,41 @@
+.competences {
+    & article {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
+        width: min(80%, 50ch);
+
+        @include p;
+
+        @include breakpoint-min(768) {
+            &:nth-of-type(odd) {
+                align-self: flex-start;
+
+                margin-left: 1.5rem;
+            }
+
+            &:nth-of-type(even) {
+                align-self: flex-end;
+
+                margin-right: 1.5rem;
+            }
+        }
+
+        @include breakpoint-min(1024) {
+            gap: 2rem;
+        }
+
+        & ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            
+            margin-left: 1rem;
+            & li {
+                list-style: none;
+            }
+        }
+    }
+}
