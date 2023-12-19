@@ -16,7 +16,7 @@ const Routes = () => {
         },
         {
           path: "*",
-          element: <Navigate to="/" />,
+          element: <Navigate to="/" replace/>,
         },
       ],
     },
