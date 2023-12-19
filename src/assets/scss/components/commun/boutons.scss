@@ -56,41 +56,12 @@
                 height: 100%;
                 
                 margin: 0;
-                padding: 0.5rem 0.6rem;
 
                 transition: all 0.1s ease-in-out;
 
                 @include psmaller;
-                font-size: 0.8rem;
-                font-weight: 600;
-                color: var(--blanc);
-                text-align: center;
+
                 text-decoration: none;
-
-                @include breakpoint-min(480){
-                    padding: 0.5rem 1rem;
-                    font-size: 1rem;
-                }
-
-                @include breakpoint-min(640){
-                    padding: 0.5rem 1.2rem;
-                    font-size: 1.15rem;
-                }
-
-                @include breakpoint-min(768){
-                    padding: 0.5rem 1.5rem;
-                    font-size: 1.25rem;
-                }
-
-                @include breakpoint-min(1024){
-                    padding: 0.5rem 2rem;
-                    font-size: 1.5rem;
-                }
-
-                @include breakpoint-min(1400){
-                    padding: 1rem 2.5rem;
-                    font-size: 2rem;
-                }
 
                 
             }
