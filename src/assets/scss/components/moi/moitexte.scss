@@ -1,115 +1,59 @@
-.apropos{
+.apropos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
     width: 80%;
 
-    @include breakpoint-min(768){
+    @include breakpoint-min(768) {
         width: 50%;
     }
 
-    & h3{
-        font-family: "neulis-sans", sans-serif;
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--blanc);
-
-        @include breakpoint-min(480){
-            font-size: 2.5rem;
-        }
-
-        @include breakpoint-min(768){
-            font-size: 3rem;
-        }
-
-        @include breakpoint-min(1024){
-            font-size: 4rem;
-        }
-
-        @include breakpoint-min(1200){
-            font-size: 5rem;
-        }
+    & h3 {
+        @include h3;
     }
 
-    & > span{
+    & > h4 {
         margin-top: 0.2rem;
 
-        font-family: "neulis-sans", sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--blanc);
-        
-
-        @include breakpoint-min(480){
-            font-size: 1.2rem;
-        }
-
-        @include breakpoint-min(768){
-            font-size: 1.4rem;
-        }
-
-        @include breakpoint-min(1024){
-            font-size: 1.6rem;
-        }
-
-        @include breakpoint-min(1200){
-            font-size: 1.8rem;
-        }
+        @include h4;
     }
 
-    & p{
-        position: relative;
+    & p {
+
 
         margin-top: 1rem;
 
-        font-family: "neulis-sans", sans-serif;
-        font-size: 0.8rem;
-        font-weight: 500;
-        color: var(--blanc);
+        @include p;
 
-        &::before{
-            content: "";
 
-            position: absolute;
-            top: 50%;
-            left: -1.5rem;
-
-            width: 2px;
-            height: 80%;
-
-            background-color: var(--blanc);
-
-            transform: translateY(-50%);
-        }
-
-        @include breakpoint-min(480){
+        @include breakpoint-min(480) {
             margin-top: 1.5rem;
-
-            font-size: 1rem;
         }
 
-        @include breakpoint-min(768){
- 
-
+        @include breakpoint-min(768) {
             margin-top: 2rem;
-
-            font-size: 1.2rem;
         }
 
-        @include breakpoint-min(1024){
-
-
+        @include breakpoint-min(1024) {
             margin-top: 2.5rem;
-
-            font-size: 1.4rem;
         }
 
-        @include breakpoint-min(1200){
-            margin: 3rem 0;
-            
-            font-size: 1.6rem;
+        @include breakpoint-min(1200) {
+            margin-top: 3rem;
+        }
+    }
+
+    & .apropos__boutons {
+        & li {
+            background-color: var(--blanc);
+            box-shadow:
+                0 0 0 2px var(--bleu),
+                0 0 0 4px var(--rouge);
+            & a {
+                color: var(--rouge);
+            }
         }
     }
 }
