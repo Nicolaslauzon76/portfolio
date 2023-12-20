@@ -1,7 +1,7 @@
 import PhotoUn from "../../assets/img/png/photoun.jpg";
 import PhotoDeux from "../../assets/img/png/photodeux.jpg";
 import PhotoTrois from "../../assets/img/png/phototrois.jpg";
-import urlMusiqueBleuBlanc from "../../assets/img/svg/musique_bleu_blanc.svg";
+import urlMusiqueBleuBlanc from "../../assets/img/svg/Musique_bleu_blanc.svg";
 
 import Boutons from "../Header/Boutons";
 
