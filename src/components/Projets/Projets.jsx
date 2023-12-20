@@ -12,7 +12,7 @@ const urls = [url3, url2, url1, url4, url5, url6, url7]
 
 const Projets = () => {
   return (
-    <section className="projets" id="projets">
+    <section className="projets" id="projets"> 
       <div className="projets__titre">
         <h3>Mes projets</h3>
         <button>
