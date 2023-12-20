@@ -1,0 +1,98 @@
+@import "footericones.scss";
+
+footer {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 12vw 1fr 30vw;
+    grid-template-rows: 12vw 1fr 30vw;
+
+    height: 350px;
+
+    background-color: var(--noir);
+
+    @include breakpoint-min(480) {
+        height: 450px;
+    }
+
+    @include breakpoint-min(640) {
+        grid-template-columns: 14vw 1fr 1fr;
+        grid-template-rows: 14vw 1fr 14vw;
+
+        height: 500px;
+    }
+
+    @include breakpoint-min(768) {
+        grid-template-columns: 16vw 1fr 1fr;
+        grid-template-rows: 16vw 1fr 16vw;
+
+        height: 700px;
+    }
+
+    @include breakpoint-min(1024) {
+        grid-template-columns: 100px 1fr 1fr;
+        grid-template-rows: 100px 1fr 100px;
+
+        height: 900px;
+    }
+
+    @include breakpoint-min(1200) {
+        grid-template-columns: 120px 1fr 1fr;
+        grid-template-rows: 120px 1fr 120px;
+        height: 100vh;
+    }
+
+    @include breakpoint-min(1600) {
+        grid-template-columns: 175px 1fr 1fr;
+        grid-template-rows: 175px 1fr 175px;
+    }
+
+    & div[class^="musique"]{
+        position: absolute;
+        
+        width: 15%;
+        max-width: 180px;
+        opacity: 0.5;
+    }
+
+    & .musique__blanc{
+        top: 0;
+        left: 0;
+    }
+
+    & .musique__noir{
+        bottom: 100%;
+    }
+
+    & .footer__informations {
+        & h3 {
+            color: var(--rouge);
+
+            &::before {
+                background-color: var(--rouge);
+            }
+        }
+
+        & .footer__informations__boutons {
+            & li {
+                background-color: var(--blanc);
+                box-shadow:
+                    0 0 0 2px var(--noir),
+                    0 0 0 4px var(--rouge);
+
+                transition: all 0.1s ease-in-out;
+                    &:hover{
+                        background-color: var(--rouge);
+
+                        & a {
+                            color: var(--blanc);
+                        }
+                    }
+                & a {
+                    color: var(--rouge);
+                }
+            }
+        }
+    }
+}

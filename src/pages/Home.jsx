@@ -1,4 +1,5 @@
 import Competences from "../components/Competences/Competences";
+import Contact from "../components/Contact/Contact";
 import Moi from "../components/Moi/Moi";
 import Projets from "../components/Projets/Projets";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Moi />
       <Competences />
       <Projets />
+      <Contact />
     </div>
   );
 };
