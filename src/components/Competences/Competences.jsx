@@ -1,5 +1,5 @@
 import Logiciel from "../../assets/img/svg/logiciel.svg";
-import urlMusiqueBleuBlanc from "../../assets/img/svg/musique_bleu_blanc.svg";
+import urlMusiqueBleuBlanc from "../../assets/img/svg/Musique_bleu_blanc.svg";
 
 const Competences = () => {
   return (
