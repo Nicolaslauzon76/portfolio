@@ -6,3 +6,9 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
 }
+
+div.interface:has(.projets_container){
+    header, footer{
+        display: none;
+    }
+}

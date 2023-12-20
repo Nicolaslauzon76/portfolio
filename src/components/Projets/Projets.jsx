@@ -1,38 +1,38 @@
+import { Link } from "react-router-dom";
+
+import url1 from "../../assets/img/png/projets/1/Apollon1.png"
+import url2 from "../../assets/img/png/projets/1/Apollon3.png"
+import url3 from "../../assets/img/png/projets/1/Apollon4.png"
+import url4 from "../../assets/img/png/projets/2/AuxQuatreEau.jpg"
+import url5 from "../../assets/img/png/projets/2/AuxQuatreAir.jpg.jpg"
+import url6 from "../../assets/img/png/projets/2/AuxQuatreTerre.jpg"
+import url7 from "../../assets/img/png/projets/3/Agrotourisme1.png"
+
+const urls = [url3, url2, url1, url4, url5, url6, url7]
+
 const Projets = () => {
   return (
     <section className="projets" id="projets">
-        <div className="projets__titre">
-            <h3>Mes projets</h3>
-            <button>
-                <span className="rouge">Galerie</span>
-            </button>
-        </div>
+      <div className="projets__titre">
+        <h3>Mes projets</h3>
+        <button>
+          <Link to="projets">
+            <span className="rouge">Galerie</span>
+          </Link>
+        </button>
+      </div>
 
-        <article className="apercu__galerie">
-            <div className="img1">
-                
-            </div>
-            <div className="img2">
+      <article className="apercu__galerie">
 
-            </div>
-            <div className="img3">
+        {urls.map((url, index) => (
+          <div key={index} className="apercu__galerie__img">
+            <img src={url} alt="" />
+          </div>
+        ))}
 
-            </div>
-            <div className="img4">
-
-            </div>
-            <div className="img5">
-
-            </div>
-            <div className="img6">
-
-            </div>
-            <div className="img7">
-
-            </div>
-        </article>
+      </article>
     </section>
-  )
-}
+  );
+};
 
-export default Projets
+export default Projets;

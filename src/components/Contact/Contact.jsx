@@ -47,7 +47,7 @@ const Contact = () => {
                 </Link>
               </div>
               <div className="dribble">
-                <Link to="#" target="_blank">
+                <Link to="https://dribbble.com/khaki76" target="_blank">
                   <img src={Dribble} alt="" />
                 </Link>
               </div>

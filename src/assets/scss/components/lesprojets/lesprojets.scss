@@ -1,0 +1,149 @@
+.projets_container {
+
+    & .outer{
+        top: 100px;
+
+        @include breakpoint-min(1024) {
+            top: 150px;
+        }
+    }
+
+    & nav{
+        top: 0;
+        bottom: auto;
+        
+        & ul{
+            justify-content: center;
+
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @include breakpoint-min(1024) {
+            top: auto;
+            bottom: 0;
+        }
+    }
+    & .projets__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & h3 {
+            @include h3;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            @include breakpoint-min(480) {
+                margin-bottom: 3rem;
+            }
+
+            @include breakpoint-min(768) {
+                margin-bottom: 4rem;
+            }
+
+            @include breakpoint-min(1024) {
+                margin-bottom: 5rem;
+            }
+
+            @include breakpoint-min(1200) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        & p {
+            @include p;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+
+            margin-bottom: 1rem;
+
+            @include breakpoint-min(480) {
+                margin-bottom: 4rem;
+            }
+
+        }
+
+        & .projets__images {
+            display: grid;
+            grid-template-columns: calc(50% - 0.5rem ) calc(50% - 0.5rem );
+            grid-template-rows: auto 1fr;
+            gap: 1rem;
+
+            width: 100%;
+            max-width: 1500px;
+
+            & > div {
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: top left;
+                }
+            }
+        }
+
+        & .frameworks {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            width: 100%;
+            max-width: 800px;
+
+            padding: 2rem;
+            margin-bottom: 3rem;
+
+            background-color: var(--blanc);
+
+            @include breakpoint-min(480) {
+                margin-bottom: 4rem;
+            }
+
+            @include breakpoint-min(768) {
+                margin-bottom: 5rem;
+            }
+
+            @include breakpoint-min(1024) {
+                margin-bottom: 6rem;
+            }
+
+            @include breakpoint-min(1200) {
+                margin-bottom: 7rem;
+            }
+
+            & > div {
+                width: 32px;
+                aspect-ratio: 1/1;
+
+                @include breakpoint-min(480) {
+                    width: 40px;
+                }
+
+                @include breakpoint-min(768) {
+                    width: 48px;
+                }
+
+                @include breakpoint-min(1024) {
+                    width: 56px;
+                }
+
+                @include breakpoint-min(1200) {
+                    width: 72px;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

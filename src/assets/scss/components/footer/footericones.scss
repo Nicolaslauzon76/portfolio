@@ -28,6 +28,42 @@
             gap: 3rem;
         }
 
+        & .gmail {
+            position: relative;
+            cursor: pointer;
+            & span {
+                position: absolute;
+                
+                bottom: 50%;
+                left: calc(100% + 0.2rem);
+
+                padding: 0 !important;
+                margin: 0 !important;
+
+                color: var(--rouge) !important;
+                @include psmaller;
+                text-align: center;
+
+                transition: all 0.1s ease-in-out;
+                transform: translateY(50%);
+
+                @include breakpoint-min(640) {
+                    left: calc(100% + 0.5rem);
+                }
+
+                @include breakpoint-min(768) {
+                    left: calc(100% + 0.75rem);
+                }
+
+                @include breakpoint-min(1024) {
+                    left: calc(100% + 1rem);
+                }
+            }
+            & input {
+                display: none;
+            }
+        }
+
         & > div {
             width: 32px;
             aspect-ratio: 1/1;

@@ -1,18 +1,42 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+
 const Nav = () => {
+  const location = useLocation();
+  useEffect(() => {
+    // This function will be called whenever the location changes
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [location]);
   return (
     <nav>
       <ul>
         <li>
-          <a href="#moi">Moi<span></span><span></span></a>
+          <Link to="/#moi">
+            Moi<span></span>
+            <span></span>
+          </Link>
         </li>
         <li>
-          <a href="#projets">Projets<span></span><span></span></a>
+          <Link to="/#projets">
+            Projets<span></span>
+            <span></span>
+          </Link>
         </li>
         <li>
-          <a href="#competences">Compétences<span></span><span></span></a>
+          <Link to="/#competences">
+            Compétences<span></span>
+            <span></span>
+          </Link>
         </li>
         <li>
-          <a href="#contact">Contact<span></span><span></span></a>
+          <Link to="/#contact">
+            Contact<span></span>
+            <span></span>
+          </Link>
         </li>
       </ul>
     </nav>

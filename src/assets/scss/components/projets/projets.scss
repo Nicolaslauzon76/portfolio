@@ -25,17 +25,35 @@
     & .apercu__galerie {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 0.5rem;
         width: 100%;
-        aspect-ratio: 1;
+        aspect-ratio: 1 / 1;
 
         @include breakpoint-min(768) {
+            width: 40%;
+        }
+
+        @include breakpoint-min(1024) {
             width: 50%;
         }
 
         & > *{
+
+            position: relative;
+            width: auto;
+            height: auto;
+
             background-color: var(--blanc);
+
+            & img{
+
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
         }
 
         & > :nth-child(1) {
@@ -122,13 +140,17 @@
             box-shadow:
             0 0 0 2px var(--bleu),
             0 0 0 4px var(--blanc);
+            & a{
 
+                text-decoration: none;
+            }
             &:hover {
                 background-color: var(--blanc);
                 
-
-                & span {
-                    color: var(--rouge);
+                & a {
+                    & span {
+                        color: var(--rouge);
+                    }
                 }
             }
 
