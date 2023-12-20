@@ -1,0 +1,78 @@
+.contact__formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+
+    padding: 2rem;
+    background-color: var(--blanc);
+
+    @include breakpoint-min(768) {
+        width: 50%;
+    }
+    & > form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        gap: 1rem;
+
+        width: 100%;
+
+        & input, & textarea{
+            width: 100%;
+
+            padding: 0.5rem;
+
+            @include p;
+            color: var(--bleu);
+
+            border: 4px solid var(--rouge);
+        }
+
+        & input:first-of-type{
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        & input:nth-of-type(2){
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        & input:nth-of-type(3){
+            grid-area: 2 / 1 / 3 / 3;
+        }
+
+
+        & textarea{
+            grid-area: 3 / 1 / 7 / 3;
+
+            height: 200px;
+            resize: none;
+
+            @include breakpoint-min(768) {
+                height: 300px;
+            }
+
+            @include breakpoint-min(1024) {
+                height: 400px;
+            }
+        }
+
+        & input:last-of-type{
+            grid-area: 7 / 1 / 8 / 3;
+
+            width: 50%;
+            margin: auto;
+            padding: 0.5rem 1rem;
+
+            @include p;
+            color: var(--blanc);
+
+            background-color: var(--rouge);
+
+            border: none;
+
+            cursor: pointer;
+        }
+    }
+}

@@ -8,6 +8,29 @@
     position: relative;
 
     width: 100%;
+
+    margin-bottom: 5rem;
+
+    @include breakpoint-min(480) {
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint-min(640) {
+        margin-bottom: 8rem;
+    }
+
+    @include breakpoint-min(768) {
+        margin-bottom: 10rem;
+    }
+
+    @include breakpoint-min(1024) {
+        margin-bottom: 12rem;
+    }
+
+    @include breakpoint-min(1200) {
+        margin-bottom: 16rem;
+    }
+
     & > .moi__inner {
         display: flex;
         flex-direction: column;

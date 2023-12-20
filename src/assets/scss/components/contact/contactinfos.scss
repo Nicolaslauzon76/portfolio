@@ -1,0 +1,104 @@
+.contact__infos {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: -1.5rem;
+
+        width: 2px;
+        height: 100px;
+
+        background-color: var(--blanc);
+
+        transform: translateY(-50%);
+    }
+
+    & h3 {
+        margin-bottom: 0.5rem;
+
+        @include h3;
+
+        @include breakpoint-min(480) {
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint-min(768) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint-min(1024) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .icones {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        & .gmail {
+            position: relative;
+            cursor: pointer;
+            & span {
+                position: absolute;
+                
+                bottom: -2rem ;
+                left: 50%;
+
+                width: 200px;
+                padding: 0 !important;
+                margin: 0 !important;
+
+                color: var(--noir) !important;
+                @include psmaller;
+                text-align: center;
+
+                transition: all 0.1s ease-in-out;
+                transform: translateX(-50%);
+
+                @include breakpoint-min(1024) {
+                    bottom: -4rem;
+                }
+            }
+            & input {
+                display: none;
+            }
+        }
+
+        & > div {
+            width: 32px;
+            aspect-ratio: 1/1;
+
+            @include breakpoint-min(480) {
+                width: 40px;
+            }
+
+            @include breakpoint-min(768) {
+                width: 48px;
+            }
+
+            @include breakpoint-min(1024) {
+                width: 56px;
+            }
+
+            @include breakpoint-min(1200) {
+                width: 72px;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

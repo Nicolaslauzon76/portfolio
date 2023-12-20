@@ -1,0 +1,62 @@
+@import "contactform.scss";
+@import "contactinfos.scss";
+.contact__container{
+    width: 100%;
+
+    padding: 5rem 0;
+
+    background-color: var(--rouge);
+
+    @include breakpoint-min(480) {
+        padding: 7rem 0;
+    }
+
+    @include breakpoint-min(640) {
+        padding: 8rem 0;
+    }
+
+    @include breakpoint-min(768) {
+        padding: 10rem 0;
+    }
+
+    @include breakpoint-min(1024) {
+        padding: 12rem 0;
+    }
+
+    @include breakpoint-min(1200) {
+        padding: 16rem 0;
+    }
+
+    .contact {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        
+        width: 100%;
+        
+        & .contact__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            
+            width: 100%;
+            max-width: 1500px;
+            
+            padding-inline: 1rem;
+            
+            @include breakpoint-min(480) {
+                padding-inline: 2rem;
+            }
+            
+            @include breakpoint-min(768) {
+                flex-direction: row-reverse;
+                justify-content: center;
+                gap: 7.5rem;
+            }
+        }
+    }
+    
+}

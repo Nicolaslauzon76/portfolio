@@ -1,41 +1,93 @@
 @import "articlecompetence.scss";
 
 .competences {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-
     position: relative;
-    
 
     width: 100%;
 
-    & .logiciels{
+    margin-bottom: 5rem;
+
+    @include breakpoint-min(480) {
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint-min(640) {
+        margin-bottom: 8rem;
+    }
+
+    @include breakpoint-min(768) {
+        margin-bottom: 10rem;
+    }
+
+    @include breakpoint-min(1024) {
+        margin-bottom: 12rem;
+    }
+
+    @include breakpoint-min(1200) {
+        margin-bottom: 16rem;
+    }
+
+    & .logiciels {
+        position: relative;
+
         display: flex;
         justify-content: center;
-
         width: 100%;
-        max-width: 1200px;
 
-        margin-top: 4rem;
-        padding-inline: 1rem;
+        & .competences__musique {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 1;
 
-        @include breakpoint-min(480) {
-            padding-inline: 2rem;
+            width: 15%;
+            max-width: 300px;
+
+            transform: translateY(50%);
+            rotate: 180deg;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
+        & .logiciels__inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
 
-        @include breakpoint-min(768) {
-            margin-top: 5rem;
-        }
+            max-width: 1200px;
 
-        @include breakpoint-min(1024) {
-            margin-top: 6rem;
+            margin-top: 4rem;
+            padding-inline: 1rem;
+
+            @include breakpoint-min(480) {
+                padding-inline: 2rem;
+            }
+
+            @include breakpoint-min(768) {
+                margin-top: 5rem;
+            }
+
+            @include breakpoint-min(1024) {
+                margin-top: 6rem;
+            }
         }
     }
 
     & > .competences_inner {
+        position: relative;
+        z-index: 5;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -49,7 +101,6 @@
         @include breakpoint-min(480) {
             padding-inline: 2rem;
         }
-
 
         @include breakpoint-min(480) {
             gap: 3rem;
