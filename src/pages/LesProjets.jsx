@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import urlProjet1_1 from "../assets/img/png/projets/1/Apollon1.PNG";
-import urlProjet1_2 from "../assets/img/png/projets/1/Apollon2.PNG";
-import urlProjet1_3 from "../assets/img/png/projets/1/Apollon3.PNG";
-import urlProjet1_4 from "../assets/img/png/projets/1/Apollon4.PNG";
+import urlProjet1_1 from "../assets/img/png/projets/1/Apollon1.png";
+import urlProjet1_2 from "../assets/img/png/projets/1/Apollon2.png";
+import urlProjet1_3 from "../assets/img/png/projets/1/Apollon3.png";
+import urlProjet1_4 from "../assets/img/png/projets/1/Apollon4.png";
 
 import urlProjet2_1 from "../assets/img/png/projets/2/AuxQuatreEau.jpg";
 import urlProjet2_2 from "../assets/img/png/projets/2/AuxQuatreAir.jpg.jpg";
