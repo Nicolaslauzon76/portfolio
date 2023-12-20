@@ -1,8 +1,9 @@
 import Logiciel from "../../assets/img/svg/logiciel.svg";
+import urlMusiqueBleuBlanc from "../../assets/img/svg/musique_bleu_blanc.svg";
 
 const Competences = () => {
   return (
-    <section className="competences">
+    <section className="competences" id="competences">
       <div className="competences_inner">
         <h3>Mes compétences</h3>
 
@@ -75,11 +76,15 @@ const Competences = () => {
             </li>
           </ul>
         </article>
-
       </div>
-        <div className="logiciels">
+      <div className="logiciels">
+        <div className="competences__musique">
+          <img src={urlMusiqueBleuBlanc} alt="" />
+        </div>
+        <div className="logiciels__inner">
           <img src={Logiciel} alt="" />
         </div>
+      </div>
     </section>
   );
 };

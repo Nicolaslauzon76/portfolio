@@ -10,7 +10,7 @@ const sousTitre = "de moi";
 
 const Moi = () => {
   return (
-    <section className="moi">
+    <section className="moi" id="moi">
       <div className="moi_musique">
         <img src={urlMusiqueBleuBlanc} alt="" />
       </div>

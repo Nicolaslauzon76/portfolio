@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 
-const Boutons = ({classe}) => {
+import CV from "../../assets/pdf/NicolasLauzon_CV.pdf";
+
+const Boutons = ({ classe }) => {
   return (
     <div className={classe + " boutons"}>
       <ul>
         <li>
-          <Link>Mon CV</Link>
+          <Link to={CV} target="_blank">
+            Mon CV
+          </Link>
         </li>
         <li>
-          <Link>Me contacter</Link>
+          <a href="#contact">Me contacter</a>
         </li>
       </ul>
     </div>
