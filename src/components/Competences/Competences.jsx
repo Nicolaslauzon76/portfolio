@@ -47,7 +47,7 @@ const Competences = () => {
               Sélectionner soigneusement les{" "}
               <span className="rouge">couleurs</span>, les{" "}
               <span className="rouge">typographies</span> et les
-              <span className="rouge">formes</span>.
+              <span className="rouge"> formes</span>.
             </li>
           </ul>
         </article>
