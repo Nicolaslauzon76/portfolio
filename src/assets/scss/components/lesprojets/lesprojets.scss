@@ -13,10 +13,29 @@
         bottom: auto;
         
         & ul{
+            
+            display: flex;
             justify-content: center;
 
             width: 100%;
             max-width: 100%;
+            
+            & li{
+                text-align: center;
+                line-height: 1.1;
+                
+                & a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    width: min-content;
+
+                    @include breakpoint-min(640) {
+                        width: 100% ; 
+                    }
+                }
+            }
         }
 
         @include breakpoint-min(1024) {
