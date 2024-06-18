@@ -33,7 +33,7 @@ const Competences = () => {
           <ul>
             <li>
               Concevoir des <span className="rouge">logos</span>, des{" "}
-              <span className="rouges">images</span> et des{" "}
+              <span className="rouge">images</span> et des{" "}
               <span className="rouge">icônes</span>.
             </li>
 
@@ -69,8 +69,8 @@ const Competences = () => {
             </li>
 
             <li>
-              Maîtriser la <span className="rouge">théorie</span> des couleurs,
-              les <span className="rouge">profils</span> de couleur et les
+              Maîtriser la <span className="rouge">théorie des couleurs</span>,
+              les <span className="rouge">profils de couleur</span> et les
               palettes pour assurer une{" "}
               <span className="rouge">cohérence visuelle</span>.
             </li>
