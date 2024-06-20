@@ -1,38 +1,70 @@
-nav{
+nav {
 
-    & li{
-
-        & a{
-            position: relative;
-
-            &:hover{
-                & span::before, & span::after{
+    & li {
+        &.active {
+            a {
+                color: var(--rougeFonce);
+                & span::before,
+                & span::after {
                     opacity: 1;
                 }
 
-                & span:first-child::before{
+                & span:first-child::before {
                     top: 0;
                     left: 0;
                 }
 
-                & span:first-child::after{
+                & span:first-child::after {
                     bottom: 0;
                     right: 0;
                 }
 
-                & span:last-child::before{
+                & span:last-child::before {
                     top: 0;
                     right: 0;
                 }
 
-                & span:last-child::after{
+                & span:last-child::after {
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        & a {
+            position: relative;
+
+            &:hover {
+
+                & span::before,
+                & span::after {
+                    opacity: 1;
+                }
+
+                & span:first-child::before {
+                    top: 0;
+                    left: 0;
+                }
+
+                & span:first-child::after {
+                    bottom: 0;
+                    right: 0;
+                }
+
+                & span:last-child::before {
+                    top: 0;
+                    right: 0;
+                }
+
+                & span:last-child::after {
                     bottom: 0;
                     left: 0;
                 }
             }
 
 
-            & span::before, & span::after{
+            & span::before,
+            & span::after {
                 content: "";
                 position: absolute;
                 width: 10px;
@@ -43,34 +75,34 @@ nav{
                 transition: all 0.2s ease-in-out;
             }
 
-            & span:first-child::before{
+            & span:first-child::before {
                 top: 10px;
                 left: 10px;
-                
+
                 border-top: 3px solid var(--blanc);
                 border-left: 3px solid var(--blanc);
             }
 
-            & span:first-child::after{
+            & span:first-child::after {
                 bottom: 10px;
                 right: 10px;
-                
+
                 border-bottom: 3px solid var(--blanc);
                 border-right: 3px solid var(--blanc);
             }
 
-            & span:last-child::before{
+            & span:last-child::before {
                 top: 10px;
                 right: 10px;
-                
+
                 border-top: 3px solid var(--blanc);
                 border-right: 3px solid var(--blanc);
             }
 
-            & span:last-child::after{
+            & span:last-child::after {
                 bottom: 10px;
                 left: 10px;
-                
+
                 border-bottom: 3px solid var(--blanc);
                 border-left: 3px solid var(--blanc);
             }

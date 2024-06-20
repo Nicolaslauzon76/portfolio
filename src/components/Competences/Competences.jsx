@@ -1,5 +1,5 @@
-import Logiciel from "../../assets/img/svg/logiciel.svg";
 import urlMusiqueBleuBlanc from "../../assets/img/svg/Musique_bleu_blanc.svg";
+import Logiciels from "./Logiciels.js";
 
 const Competences = () => {
   return (
@@ -82,7 +82,16 @@ const Competences = () => {
           <img src={urlMusiqueBleuBlanc} alt="" />
         </div>
         <div className="logiciels__inner">
-          <img src={Logiciel} alt="" />
+          {
+            Object.keys(Logiciels).map((key) => {
+              return (
+                <div key={key} className="logiciels__item">
+                  <img src={Logiciels[key].url} alt={Logiciels[key].title} />
+                
+                </div>
+              );
+            })
+          }
         </div>
       </div>
     </section>

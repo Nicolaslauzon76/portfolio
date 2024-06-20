@@ -80,11 +80,11 @@ const Projets = [
 
 ];
 const LesProjets = () => {
-  const [projet, setProjet] = useState(Projets[0]);
+  const [projetActif, setProjetActif] = useState(Projets[0]);
   const navigate = useNavigate();
 
   const handleProjetClick = (id) => {
-    setProjet(Projets[id - 1]);
+    setProjetActif(Projets[id - 1]);
   };
   const handleBack = (e) => {
     navigate(-1);
@@ -92,15 +92,15 @@ const LesProjets = () => {
 
   return (
     <div className="projets_container">
-      <div className="outer" onClick={() => handleBack()}>
-        <div className="inner">
-          <label>Retour</label>
-        </div>
-      </div>
       <nav>
+        <div className="outer" onClick={() => handleBack()}>
+          <div className="inner">
+            <label>Retour</label>
+          </div>
+        </div>
         <ul>
           {Projets.map((projet) => (
-            <li key={projet.id} onClick={() => handleProjetClick(projet.id)}>
+            <li key={projet.id} onClick={() => handleProjetClick(projet.id)} className={projetActif.id === projet.id ? "active" : ""}>
               <Link>
                 {projet.titre}
                 <span></span>
@@ -111,11 +111,11 @@ const LesProjets = () => {
         </ul>
       </nav>
       <div className="projets__inner">
-        <h3>{projet.titre}</h3>
-        <p>{projet.description}</p>
+        <h3>{projetActif.titre}</h3>
+        <p>{projetActif.description}</p>
 
         <div className="frameworks">
-          {projet.technologies.map((technologie) => (
+          {projetActif.technologies.map((technologie) => (
             <div key={technologie.id}>
               <img src={technologie.url} alt="" />
             </div>
@@ -123,8 +123,8 @@ const LesProjets = () => {
         </div>
 
         <div className="projets__images">
-          {projet.url.map((url) => (
-            <div>
+          {projetActif.url.map((url) => (
+            <div key={url}>
               <img src={url} alt="" />
             </div>
           ))}

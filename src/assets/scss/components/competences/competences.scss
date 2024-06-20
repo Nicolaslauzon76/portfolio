@@ -59,19 +59,23 @@
                 object-fit: cover;
             }
         }
+
         & .logiciels__inner {
             position: relative;
             z-index: 2;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            align-items: center;
+            justify-items: center;
+            gap: .5rem;
 
-            max-width: 1200px;
+            max-width: 800px;
 
             margin-top: 4rem;
-            padding-inline: 1rem;
 
             @include breakpoint-min(480) {
-                padding-inline: 2rem;
+                width: 90%;
             }
 
             @include breakpoint-min(768) {
@@ -81,10 +85,29 @@
             @include breakpoint-min(1024) {
                 margin-top: 6rem;
             }
+
+
+            &>div {
+                width: 40px;
+
+                @include breakpoint-min(768) {
+                    width: 60px;
+                }
+
+                @include breakpoint-min(1024) {
+                    width: 70px;
+                }
+
+                &>svg {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
         }
     }
 
-    & > .competences_inner {
+    &>.competences_inner {
         position: relative;
         z-index: 5;
 
