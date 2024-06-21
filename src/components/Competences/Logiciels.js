@@ -1,51 +1,51 @@
 const Logiciels ={
     HTML: {
         title: "HTML",
-        url:'src/assets/img/svg/frameworks/HTML5_logo.svg'
+        url:'/frameworks/HTML5_Logo.svg'
     },
     CSS: {
         title: "CSS",
-        url:'src/assets/img/svg/frameworks/CSS_logo.svg'
+        url:'/frameworks/CSS_Logo.svg'
     }, 
     JS: {
         title: "JavaScript",
-        url:'src/assets/img/svg/frameworks/JS_logo.svg'
+        url:'/frameworks/JS_Logo.svg'
     },
     React: {
         title: "React",
-        url:'src/assets/img/svg/frameworks/React_logo.svg'
+        url:'/frameworks/React_Logo.svg'
     },
     VueJs: {
         title: "VueJs",
-        url:'src/assets/img/svg/frameworks/Vue_logo.svg'
+        url:'/frameworks/Vue_Logo.svg'
     },
     CSharp: {
         title: "C#",
-        url:'src/assets/img/svg/frameworks/Cs_logo.svg'
+        url:'/frameworks/Cs_Logo.svg'
     },
     Unity: {
         title: "Unity",
-        url:'src/assets/img/svg/frameworks/Unity_logo.svg'
+        url:'/frameworks/Unity_Logo.svg'
     },
     Photoshop: {
         title: "Photoshop",
-        url:'src/assets/img/svg/frameworks/Photoshop_logo.svg'
+        url:'/frameworks/Photoshop_Logo.svg'
     },
     Illustrator: {
         title: "Illustrator",
-        url:'src/assets/img/svg/frameworks/Illustrator_logo.svg'
+        url:'/frameworks/Illustrator_Logo.svg'
     },
     PremierePro: {
         title: "Premiere Pro",
-        url:'src/assets/img/svg/frameworks/Premiere_logo.svg'
+        url:'/frameworks/Premiere_Logo.svg'
     }, 
     AfterEffects: {
         title: "After Effects",
-        url:'src/assets/img/svg/frameworks/AfterEffects_Logo.svg'
+        url:'/frameworks/AfterEffects_Logo.svg'
     },
     XD: {
         title: "XD",
-        url:'src/assets/img/svg/frameworks/XD_logo.svg'
+        url:'/frameworks/XD_Logo.svg'
     },
 }
 

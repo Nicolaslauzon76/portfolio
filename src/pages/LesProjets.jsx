@@ -19,13 +19,13 @@ import urlProjet4_1 from "../assets/img/png/projets/4/nodewave1.jpg";
 import urlProjet4_2 from "../assets/img/png/projets/4/nodewave2.jpg";
 import urlProjet4_3 from "../assets/img/png/projets/4/nodewave3.jpg";
 
-import Photoshop from "../assets/img/svg/frameworks/Photoshop_Logo.svg";
-import Illustrator from "../assets/img/svg/frameworks/Illustrator_Logo.svg";
-import HTML from "../assets/img/svg/frameworks/HTML5_Logo.svg";
-import CSS from "../assets/img/svg/frameworks/CSS_Logo.svg";
-import ReactLogo from "../assets/img/svg/frameworks/React_Logo.svg";
-import Vue from "../assets/img/svg/frameworks/Vue_Logo.svg";
-import XD from "../assets/img/svg/frameworks/XD_Logo.svg";
+import Photoshop from "/frameworks/Photoshop_Logo.svg"
+import Illustrator from "/frameworks/Illustrator_Logo.svg";
+import HTML from "/frameworks/HTML5_Logo.svg";
+import CSS from "/frameworks/CSS_Logo.svg";
+import ReactLogo from "/frameworks/React_Logo.svg";
+import Vue from "/frameworks/Vue_Logo.svg";
+import XD from "/frameworks/XD_Logo.svg";
 import { Link } from "react-router-dom";
 
 const Projets = [
