@@ -34,6 +34,7 @@ const Projets = [
     titre: "NodeWave",
     description: "Voici une application web dédiée à la création de musique. L'application a été réalisée en 2 semaines et permet de créer de la musique en ajoutant des nodes et des liens entre ceux-ci.",
     url: [urlProjet4_1, urlProjet4_2, urlProjet4_3],
+    url2: "https://nodewave.netlify.app/",
     technologies: [
       { id: 1, url: ReactLogo },
       { id: 2, url: HTML },
@@ -111,7 +112,18 @@ const LesProjets = () => {
         </ul>
       </nav>
       <div className="projets__inner">
-        <h3>{projetActif.titre}</h3>
+        <h3>
+          {projetActif.titre}
+          {
+            projetActif.url2 && (
+              <Link to={projetActif.url2} target="_blank" rel="noreferrer">
+                Voir le projet
+              </Link>
+            )
+          }
+        </h3>
+
+        <span></span>
         <p>{projetActif.description}</p>
 
         <div className="frameworks">

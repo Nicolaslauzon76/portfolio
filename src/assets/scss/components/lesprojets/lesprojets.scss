@@ -28,6 +28,14 @@
             width: 100%;
             max-width: 100%;
 
+            @include breakpoint-min(768) {
+                gap: .5rem;
+            }
+
+            @include breakpoint-min(1024) {
+                gap: 1rem;
+            }
+
             & li {
                 text-align: center;
                 line-height: 1.1;
@@ -49,6 +57,9 @@
                     @include breakpoint-min(640) {
                         width: 100%;
                     }
+                    @include breakpoint-min(768) {
+                        font-size: 1em;
+                    }
                 }
             }
         }
@@ -62,8 +73,14 @@
 
         & h3 {
             @include h3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
             margin-bottom: 2rem;
+
+
 
             @include breakpoint-min(480) {
                 margin-bottom: 3rem;
@@ -79,6 +96,28 @@
 
             @include breakpoint-min(1200) {
                 margin-bottom: 6rem;
+            }
+
+            & a {
+                margin-top: 1rem;
+
+                color: var(--rouge);
+                font-size: 0.3em;
+                text-decoration: none;
+
+               transition: color 0.1s ease-in-out;
+
+                &:hover {
+                    color: var(--rougeFonce);
+                }
+
+                @include breakpoint-min(480) {
+                    font-size: 0.4em;
+                }
+
+                @include breakpoint-min(768) {
+                    font-size: .5em;
+                }
             }
         }
 
@@ -126,7 +165,7 @@
             padding: 2rem;
             margin-bottom: 3rem;
 
-            background-color: var(--blanc);
+            // background-color: var(--blanc);
 
             @include breakpoint-min(480) {
                 margin-bottom: 4rem;
